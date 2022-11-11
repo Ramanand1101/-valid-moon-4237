@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping,for man,women and kids</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="slider.css" rel="stylesheet" type="text/css" />
     <link href="utils.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     
 </head>
@@ -29,7 +31,7 @@
             <input class="search" type="text"  placeholder="Search product">
             <div class="mx-2">
                 <img id="profile" src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"/>
-                <div class="profile mx-2">Profile</div>
+                <div class="profile mx-2"><a href="signup.html">Profile</a> </div>
             </div>
             <div>
                 <img id="wishlist" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAMAAAC4XpwXAAAAZlBMVEX///8AAADW1tbS0tKNjY1bW1u3t7cTExPu7u7p6eni4uLPz88iIiJTU1P4+PjKysocHBxhYWFGRkZvb29NTU2hoaF+fn4+Pj4qKiqoqKgYGBh2dnYvLy/Dw8MJCQmGhoaVlZU2Nja/ybNRAAADg0lEQVRoge2a23arIBCGQRPjKWiOxqQx9v1fsk3LSQUdhJjdtfmvukD4CjLDzBiErBTW5/0V43K9ilK5nRT1rdrgJt+tosQOoVPaXrCkjzqmHcGtlNqbfUScs+PVFfd0OT0x6aHfjqvIMfz+MWB8ax+gU6Pq2MXTU8K1UiF+MLqOdHpSqIabO627K/h5Bhzjwg38JGZsjquoyKLzsY/K122U3etDJTU52fxMTPjgE4adl5GfmJWT+5a3Hl3Q+XKqzmICAT90DDzi7Sd7ON/3Q6+DbDWQJGdD7N0Om+k26KH44QpThm9t4Wwf94p1JE/Xe1YMKuig0nbx7HRlqs4Q460ScHNjdYROs1N311jtUhM6TLUxBgomFqGzabpl6p0Bq555eum40u62p052azoupf+13t+ReFLkNvP9sfMSaJ8IMVgrUzpzE3p6MArs6PFWusbg9GIm54Ru7LSoi7zqz7wBfWQNalFbUfnnGXTDQ8+O/PBqmkU3jBJbOmokuGP0ONUrYde70bnj6xo5LuyZ8ZnYRC0cnuzpmDFDhdHZJsI9TszgeMzLw+gxf/UtDE542jN6VGF0KUoEebyE55r5qJMA0qVkAmB36Sd/ejywgdLJAY4PBHwikYXSERG5Yj+s7im9QOFwOkJrGD7BYLgJXcpiR9xOYAA3oktHb607yoUoJADSZyM6evCpNYFqsTGBG9IlfKXqvottB+UQhnRp86vh6gsBh8UCpnTh8vGl78EjU7g5XapifHbv+5p3XKFRkDldonTwovkCDsFm0CWOlCRJhR144D+HLuE3bPUS/NV06Xw14U9Dp5JoQU9+YzlqTkREdx0DE4Z9fRr2Azuir8v8W8xHBzinarpeW+A3Rb+SaEGnRaio240Hd4ZUwevXaRegy/g30IeJyG69IB2l3W8FBxb+LENHqfw15EaQ/dqPBnQ5inpGW/b0IHuqoCU4UmRMyqJcXEpwB3RDkd/q9W+OsTgdxc9X1aI30VG85RXqN9ARqdlf76ALebqn/0V6nExLl0K6uGE3U8LhC+nT8nRPd0sffNNflB6Ek8peZ+828nRP93RTutretSbumK7xdaAPgS/z857u6a+kN8owdiG65mcvoMn+uq/zdE//3+j3yFgO6fy3InA5pEPyOE/3dLf0SgtZgm4jT/d0T/d0T/9n6el0eXZSwXEu3aU83dM9XdIXYasz/pHtTjYAAAAASUVORK5CYII="/>
@@ -42,11 +44,41 @@
         </div>
     </nav>
     </header>
-    <section class="container section1">
-        <div id="#catalog"> 
-           
+
+        <div id="mid-section"> 
+            <div class="slider">
+                <div class="carousel"
+                    data-flickity='{ "lazyLoad": true }'>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="C:\Users\HP\Desktop\-valid-moon-4237\2022-11-11.png" alt="tulip" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="C:\Users\HP\Desktop\-valid-moon-4237\2022-11-11 (4).png" alt="grapes" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="C:\Users\HP\Desktop\-valid-moon-4237\2022-11-11 (3).png" alt="raspberries" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="C:\Users\HP\Desktop\-valid-moon-4237\2022-11-11 (2).png" alt="wolf" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7bb49d2a-8588-41e7-9081-342339bfb37d/ddl95sj-4f2dc038-52f4-4369-8ce2-977c63d427eb.jpg/v1/fill/w_1024,h_284,q_75,strp/men_s_fashion__banner_by_asimcarnage_ddl95sj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiYjQ5ZDJhLTg1ODgtNDFlNy05MDgxLTM0MjMzOWJmYjM3ZFwvZGRsOTVzai00ZjJkYzAzOC01MmY0LTQzNjktOGNlMi05NzdjNjNkNDI3ZWIuanBnIiwiaGVpZ2h0IjoiPD0yODQiLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwid21rIjp7InBhdGgiOiJcL3dtXC83YmI0OWQyYS04NTg4LTQxZTctOTA4MS0zNDIzMzliZmIzN2RcL2FzaW1jYXJuYWdlLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.ktKYKsraKd0YmHxi2mHLJfVcWFbkYW687jM82VjT2sU" alt="sea" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="https://assets.myntassets.com/assets/images/retaillabs/2022/5/10/caab17b2-7951-48d6-bcf3-36c0d1b3245b1652165231847-sne-hp-banner-thin-1080x342.jpg" />
+                    </div>
+                    </div>
+            </div>
         </div>
-        </section>
+       <div class="catalog">
+        
+       </div>
         <footer class="footer">
             <div class="box">
                 <div class="row">
@@ -110,7 +142,8 @@
             </div>
         </footer>
 
-    </section>
+   
 </body>
 </html>
 <script type="text/javascript" src="index.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

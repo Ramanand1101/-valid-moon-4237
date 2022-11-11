@@ -15,6 +15,10 @@ header{
     height:80px;
 
 }
+.catalog{
+    height:300px;
+    background-color: grey;
+}
 nav{
     font-size: 12px;
     padding:0 12px;
@@ -36,6 +40,10 @@ nav ul li{
 .right img{
     width:20px;
   
+}
+#slider{
+    width:100%;
+    margin: auto;
 }
 .section1{
     background:rgb(222, 221, 230);
