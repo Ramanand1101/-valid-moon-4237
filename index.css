@@ -15,10 +15,12 @@ header{
     height:80px;
 
 }
+
 .catalog{
     height:300px;
     background-color: grey;
 }
+
 nav{
     font-size: 12px;
     padding:0 12px;
@@ -41,10 +43,12 @@ nav ul li{
     width:20px;
   
 }
+
 #slider{
     width:100%;
     margin: auto;
 }
+
 .section1{
     background:rgb(222, 221, 230);
     height: 122vh;
@@ -56,6 +60,7 @@ nav ul li{
     border:0.5px solid grey;
     background:#f7f8fd;
     border-radius:5px;
+
 }
 .box{
     width:100%;
@@ -109,3 +114,5 @@ footer ul li{
     color:grey;
     text-decoration: none;
 }
+}
+
