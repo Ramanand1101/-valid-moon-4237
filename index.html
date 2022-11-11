@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping,for man,women and kids</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
+
+    <link href="slider.css" rel="stylesheet" type="text/css" />
+    <link href="utils.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="utils.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -13,36 +18,134 @@
         <nav class="flex space-between ">
         <div class="left flex">
             <img src="https://document-export.canva.com/h2GTs/DAFRYrh2GTs/2/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20221108%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221108T224621Z&X-Amz-Expires=37147&X-Amz-Signature=2cbd604a8cdbeab23b7d3f5a30500f739cfcbf8a227a86207c74d7f0ff2dcdec&X-Amz-SignedHeaders=host&response-expires=Wed%2C%2009%20Nov%202022%2009%3A05%3A28%20GMT"/>
-            <ul class="flex items-center justify-center uppercase semibold">
-                <li>Men</li>
-                <li>Women</li>
-                <li>Kids</li>
-                <li>Home and Living</li>
-                <li>Beauty</li>
-                <li>Studio</li>
+
+            <ul class="navbar flex items-center justify-center uppercase semibold">
+                <li><a href="#">Men</a>
+                <li><a href="#">WoMen</a>
+                <li><a href="#">Kids</a>
+                <li><a href="#">Home & Living</a>
+                <li><a href="#">Beauty</a>
+                <li><a href="#">Studio</a>
+
+            
+         
             </ul>
         </div>
         <div class="right flex uppercase semibold items-center text-align-center">
             <input class="search" type="text"  placeholder="Search product">
             <div class="mx-2">
-                <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"/>
-                <div class="profile mx-2">Profile</div>
+            
+                <img id="profile" src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"/>
+                <div class="profile mx-2"><a href="signup.html">Profile</a></div>
             </div>
             <div>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAMAAAC4XpwXAAAAZlBMVEX///8AAADW1tbS0tKNjY1bW1u3t7cTExPu7u7p6eni4uLPz88iIiJTU1P4+PjKysocHBxhYWFGRkZvb29NTU2hoaF+fn4+Pj4qKiqoqKgYGBh2dnYvLy/Dw8MJCQmGhoaVlZU2Nja/ybNRAAADg0lEQVRoge2a23arIBCGQRPjKWiOxqQx9v1fsk3LSQUdhJjdtfmvukD4CjLDzBiErBTW5/0V43K9ilK5nRT1rdrgJt+tosQOoVPaXrCkjzqmHcGtlNqbfUScs+PVFfd0OT0x6aHfjqvIMfz+MWB8ax+gU6Pq2MXTU8K1UiF+MLqOdHpSqIabO627K/h5Bhzjwg38JGZsjquoyKLzsY/K122U3etDJTU52fxMTPjgE4adl5GfmJWT+5a3Hl3Q+XKqzmICAT90DDzi7Sd7ON/3Q6+DbDWQJGdD7N0Om+k26KH44QpThm9t4Wwf94p1JE/Xe1YMKuig0nbx7HRlqs4Q460ScHNjdYROs1N311jtUhM6TLUxBgomFqGzabpl6p0Bq555eum40u62p052azoupf+13t+ReFLkNvP9sfMSaJ8IMVgrUzpzE3p6MArs6PFWusbg9GIm54Ru7LSoi7zqz7wBfWQNalFbUfnnGXTDQ8+O/PBqmkU3jBJbOmokuGP0ONUrYde70bnj6xo5LuyZ8ZnYRC0cnuzpmDFDhdHZJsI9TszgeMzLw+gxf/UtDE542jN6VGF0KUoEebyE55r5qJMA0qVkAmB36Sd/ejywgdLJAY4PBHwikYXSERG5Yj+s7im9QOFwOkJrGD7BYLgJXcpiR9xOYAA3oktHb607yoUoJADSZyM6evCpNYFqsTGBG9IlfKXqvottB+UQhnRp86vh6gsBh8UCpnTh8vGl78EjU7g5XapifHbv+5p3XKFRkDldonTwovkCDsFm0CWOlCRJhR144D+HLuE3bPUS/NV06Xw14U9Dp5JoQU9+YzlqTkREdx0DE4Z9fRr2Azuir8v8W8xHBzinarpeW+A3Rb+SaEGnRaio240Hd4ZUwevXaRegy/g30IeJyG69IB2l3W8FBxb+LENHqfw15EaQ/dqPBnQ5inpGW/b0IHuqoCU4UmRMyqJcXEpwB3RDkd/q9W+OsTgdxc9X1aI30VG85RXqN9ARqdlf76ALebqn/0V6nExLl0K6uGE3U8LhC+nT8nRPd0sffNNflB6Ek8peZ+828nRP93RTutretSbumK7xdaAPgS/z857u6a+kN8owdiG65mcvoMn+uq/zdE//3+j3yFgO6fy3InA5pEPyOE/3dLf0SgtZgm4jT/d0T/d0T/9n6el0eXZSwXEu3aU83dM9XdIXYasz/pHtTjYAAAAASUVORK5CYII="/>
+                <img id="wishlist" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAMAAAC4XpwXAAAAZlBMVEX///8AAADW1tbS0tKNjY1bW1u3t7cTExPu7u7p6eni4uLPz88iIiJTU1P4+PjKysocHBxhYWFGRkZvb29NTU2hoaF+fn4+Pj4qKiqoqKgYGBh2dnYvLy/Dw8MJCQmGhoaVlZU2Nja/ybNRAAADg0lEQVRoge2a23arIBCGQRPjKWiOxqQx9v1fsk3LSQUdhJjdtfmvukD4CjLDzBiErBTW5/0V43K9ilK5nRT1rdrgJt+tosQOoVPaXrCkjzqmHcGtlNqbfUScs+PVFfd0OT0x6aHfjqvIMfz+MWB8ax+gU6Pq2MXTU8K1UiF+MLqOdHpSqIabO627K/h5Bhzjwg38JGZsjquoyKLzsY/K122U3etDJTU52fxMTPjgE4adl5GfmJWT+5a3Hl3Q+XKqzmICAT90DDzi7Sd7ON/3Q6+DbDWQJGdD7N0Om+k26KH44QpThm9t4Wwf94p1JE/Xe1YMKuig0nbx7HRlqs4Q460ScHNjdYROs1N311jtUhM6TLUxBgomFqGzabpl6p0Bq555eum40u62p052azoupf+13t+ReFLkNvP9sfMSaJ8IMVgrUzpzE3p6MArs6PFWusbg9GIm54Ru7LSoi7zqz7wBfWQNalFbUfnnGXTDQ8+O/PBqmkU3jBJbOmokuGP0ONUrYde70bnj6xo5LuyZ8ZnYRC0cnuzpmDFDhdHZJsI9TszgeMzLw+gxf/UtDE542jN6VGF0KUoEebyE55r5qJMA0qVkAmB36Sd/ejywgdLJAY4PBHwikYXSERG5Yj+s7im9QOFwOkJrGD7BYLgJXcpiR9xOYAA3oktHb607yoUoJADSZyM6evCpNYFqsTGBG9IlfKXqvottB+UQhnRp86vh6gsBh8UCpnTh8vGl78EjU7g5XapifHbv+5p3XKFRkDldonTwovkCDsFm0CWOlCRJhR144D+HLuE3bPUS/NV06Xw14U9Dp5JoQU9+YzlqTkREdx0DE4Z9fRr2Azuir8v8W8xHBzinarpeW+A3Rb+SaEGnRaio240Hd4ZUwevXaRegy/g30IeJyG69IB2l3W8FBxb+LENHqfw15EaQ/dqPBnQ5inpGW/b0IHuqoCU4UmRMyqJcXEpwB3RDkd/q9W+OsTgdxc9X1aI30VG85RXqN9ARqdlf76ALebqn/0V6nExLl0K6uGE3U8LhC+nT8nRPd0sffNNflB6Ek8peZ+828nRP93RTutretSbumK7xdaAPgS/z857u6a+kN8owdiG65mcvoMn+uq/zdE//3+j3yFgO6fy3InA5pEPyOE/3dLf0SgtZgm4jT/d0T/d0T/9n6el0eXZSwXEu3aU83dM9XdIXYasz/pHtTjYAAAAASUVORK5CYII="/>
                 <div class="wishlist mx-2">Wishlist</div>
             </div>
             <div>
-                <img src="https://cdn-icons-png.flaticon.com/128/102/102665.png"/>
+                <img id="bag" src="https://cdn-icons-png.flaticon.com/128/102/102665.png"/>
                 <div class="bag mx-2">Bag</div>
-            </div>
-           
-           
+            </div>    
         </div>
     </nav>
     </header>
-    <section class="container section1">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur consequuntur vero nihil?
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</section>
+
+        <div id="mid-section"> 
+            <div class="slider">
+                <div class="carousel"
+                    data-flickity='{ "lazyLoad": true }'>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="C:\Users\HP\Desktop\-valid-moon-4237\2022-11-11.png" alt="tulip" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="C:\Users\HP\Desktop\-valid-moon-4237\2022-11-11 (4).png" alt="grapes" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="C:\Users\HP\Desktop\-valid-moon-4237\2022-11-11 (3).png" alt="raspberries" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="C:\Users\HP\Desktop\-valid-moon-4237\2022-11-11 (2).png" alt="wolf" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7bb49d2a-8588-41e7-9081-342339bfb37d/ddl95sj-4f2dc038-52f4-4369-8ce2-977c63d427eb.jpg/v1/fill/w_1024,h_284,q_75,strp/men_s_fashion__banner_by_asimcarnage_ddl95sj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiYjQ5ZDJhLTg1ODgtNDFlNy05MDgxLTM0MjMzOWJmYjM3ZFwvZGRsOTVzai00ZjJkYzAzOC01MmY0LTQzNjktOGNlMi05NzdjNjNkNDI3ZWIuanBnIiwiaGVpZ2h0IjoiPD0yODQiLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwid21rIjp7InBhdGgiOiJcL3dtXC83YmI0OWQyYS04NTg4LTQxZTctOTA4MS0zNDIzMzliZmIzN2RcL2FzaW1jYXJuYWdlLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.ktKYKsraKd0YmHxi2mHLJfVcWFbkYW687jM82VjT2sU" alt="sea" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="https://assets.myntassets.com/assets/images/retaillabs/2022/5/10/caab17b2-7951-48d6-bcf3-36c0d1b3245b1652165231847-sne-hp-banner-thin-1080x342.jpg" />
+                    </div>
+                    </div>
+            </div>
+        </div>
+       <div class="catalog">
+        
+       </div>
+        <footer class="footer">
+            <div class="box">
+                <div class="row">
+                <div class="footer-col">
+                    <h4>Online Shopping</h4>
+                    <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Home and Living</a></li>
+                        <li><a href="#">Beauty</a></li>
+                        <li><a href="#">Gift Cards</a></li>    
+                    </ul>
+                    <h4>Useful links</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                        <li><a href="#">Whitehat</a></li>
+                        
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">Contact-us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">T&C</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Track Orders</a></li>  
+                        <li><a href="#">Shipping</a></li>  
+                        <li><a href="#">Cancellation</a></li>  
+                        <li><a href="#">Returns</a></li>  
+                        <li><a href="#">Grievancces Officer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Experience myntra app on mobile</h4>
+                    
+                    <div class="play-store">
+                        <img id="play" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU43Ho7h3_FSr2y4RRLZkMdOFGa-fd_CwI3A&usqp=CAU"/>
+                    </div>
+                            <h4>Keep in touch</h4>
+                            <div class="social-links">
+                                <a href="#"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/20/20837.png"/></a>
+                                <a href="#"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/25/25347.png"/></a>
+                                <a href="#"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/160/160205.png"/></a>
+                                <a href="#"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/3661/3661391.png"/></a>
+                            </div>
+                    </div>
+                    <div class="return">
+                        <img id="play" src="data:image/png;base64,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"/>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+   
 </body>
 </html>
+
