@@ -3,6 +3,8 @@
 body { font-family: sans-serif; }
 
 .carousel {
+
+  height:100%;
   background: #FAFAFA;
 }
 
