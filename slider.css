@@ -1,31 +1,12 @@
-* { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
-
-.carousel {
-
-  height:100%;
-  background: #FAFAFA;
-}
-
-.carousel-cell {
-  width: 100%;
-  margin-right: 10px;
-  
- 
-}
-
-.carousel-cell-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
-}
-
-/* fade in lazy loaded image */
-.carousel-cell-image.flickity-lazyloaded,
-.carousel-cell-image.flickity-lazyerror {
-  opacity: 1;
-}
+#mid-section{
+    width:95%;
+    height:400px;
+    margin: auto;
+    margin-top:8%;
+    margin-bottom: 20%;
+    
+  }
+  #mid-section>div>img{
+    width:100%;
+  }

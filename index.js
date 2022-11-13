@@ -18,25 +18,21 @@ function displayCard(out){
     console.log(out);
     out.forEach(elem => {
         let div=document.createElement("div")
-        
+
         let image=document.createElement("img")
         image.setAttribute("src",elem.images)
 
-        let title=document.createElement("h3")
-        title.innerText=elem.title
+        let h1=document.createElement("p")
+        h1.innerText="Min 60% off"
         
+        let sale=document.createElement("h3")
+        sale.innerText="Budget Buys"
 
-        let price=document.createElement("p")
-        price.innerText="RS-"+elem.price
 
-        let des=document.createElement("p")
-        des.innerText=elem.description
-
-        let btn=document.createElement("button")
-        btn.innerText="Add to Cart"
-
-        div.append(image,title,price,des,btn)
-        document.querySelector(".catalog").append(div)
+        div.append(image,h1)
+       
+        document.querySelector(".product").append(div)
+        
     });
 }
 
